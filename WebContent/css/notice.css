@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+body { font-size: 12px; font-family: sans-serif; }
+#content { width: 800px; margin: 50px auto; }
+#content table { width: 800px; border: 1px solid black; border-collapse: collapse; }
+#content table thead { background: #eae2d7; text-align: center; }
+#content table tbody { text-align: left; }
+#content table th, #content table td { border: 1px dotted black; padding: 6px; }
+.button { border: 1px solid black; padding: 3px 0px; background: #778899; }
+.button a { color: white; text-decoration: none; padding: 0px 10px; }
+a { text-decoration: none; color: black; }
+.header { background: #eae2d7; font-weight: bold; }
+.error { border: 1px solid red; }
+.error_text { color: red; }

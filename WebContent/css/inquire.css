@@ -1,0 +1,11 @@
+@CHARSET "UTF-8";
+body { font-size: 12px; font-family: sans-serif; }
+#content { width: 800px; margin: 50px auto;}
+#content table { width: 800px; border-collapse: collapse; border : 1px solid black; }
+#content table th { background: #eae2d7; }
+#content table th, #content table td { border: 1px dotted gray; padding: 5px; }
+.button { padding: 5px 0px; background: #778899; border: 1px solid black; }
+.button a { padding: 0px 10px; color: white; text-decoration: none; }
+.error { color: red; }
+a { text-decoration: none; color: black; }
+img { border: 0px; }

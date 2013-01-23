@@ -1,0 +1,12 @@
+@CHARSET "EUC-KR";
+body { font-size: 12px; font-family: sans-serif; }
+#content { width: 800px; margin: 50px auto; }
+#content table { width: 800px; border-collapse: collapse; border: 1px solid black; }
+#content table th { background: #eae2d7; }
+#content table th, #content table td { padding: 5px; border: 1px dotted black; }
+.button { padding: 5px 0px; background: #778899; border: 1px solid black; }
+.button a { padding: 0px 5px; color: white; }
+a { text-decoration: none; color: black; }
+.error { color: red; }
+.error_box { border: 1px solid red; }
+.small { color: gray; font-size: 10px; }

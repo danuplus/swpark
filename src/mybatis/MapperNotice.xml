@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mybatis.MapperNotice">
+	<typeAlias alias="Notice" type="org.ahsan.swpark.domain.Notice"/>
+
+	<select id="getAllArticleByPage" parameterType="hashmap" resultType="Notice">
+		select * from bd_notice order by no desc limit #{start}, #{stop}
+	</select>
+	<select id="getMaxPage" resultType="int">
+		select count(no) from bd_notice 
+	</select>
+	<select id="getArticleByNo" parameterType="int" resultType="Notice">
+		select * from bd_notice where no = #{no}
+	</select>
+	<select id="checkPassword" parameterType="hashmap" resultType="int">
+		select count(no) from bd_notice where no=#{no} and password=#{password}
+	</select>
+	<insert id="addArticle" parameterType="Notice" useGeneratedKeys="true" keyProperty="no">
+		insert into bd_notice(title, notice, writer, password, wdate, ref)
+	    values(#{title}, #{notice}, #{writer}, #{password}, now(), 0)
+	</insert>
+	<update id="editArticle" parameterType="Notice">
+		update bd_notice set title=#{title},
+	    				 	 notice=#{notice},
+	    				 	 writer=#{writer},
+	    				 	 password=#{password}
+	    where no=#{no}
+	</update>
+	<delete id="removeArticle" parameterType="int">
+		delete from bd_notice where no=#{no}
+	</delete>
+	<update id="addReadCount" parameterType="int">
+		update bd_notice set ref=ref+1 where no=#{no}
+	</update>
+</mapper>
