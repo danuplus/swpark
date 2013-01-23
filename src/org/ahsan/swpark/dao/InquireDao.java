@@ -14,9 +14,9 @@ import org.ahsan.swpark.domain.Inquire;
 public class InquireDao {
 	
 	private Connection conn;
-	private static final String URL = "jdbc:mysql://118.130.116.75:3306/madvirusdb?useUnicode=true&characterEncoding=utf-8";
-	String dbUser = "gnu";
-	String pass = "#2323#";
+	private static final String URL = "jdbc:mysql://localhost:3306/madvirusdb?useUnicode=true&characterEncoding=utf-8";
+	String dbUser = "madvirus";
+	String pass = "madvirus";
 		
 	public static final int POST_PER_PAGE = 15;
 	
